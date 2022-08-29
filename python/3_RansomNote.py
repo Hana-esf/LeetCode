@@ -1,6 +1,3 @@
-from unittest import result
-
-
 from collections import OrderedDict
 
 def canConstruct(ransomNote: str, magazine: str) -> bool:
@@ -15,8 +12,7 @@ def canConstruct(ransomNote: str, magazine: str) -> bool:
         result_mag[keys] = result_mag.get(keys, 0) + 1
     result_mag = OrderedDict(sorted(result_mag.items()))
 
-    print(result_ran)
-    print(result_mag)
+
     for i in result_ran:
         if i not in result_mag or result_ran[i] > result_mag[i]:
             return False
